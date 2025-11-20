@@ -1,0 +1,40 @@
+{
+  "queries": [
+    {
+      "name": "Flights from JFK",
+      "count": 1,
+      "results": [
+        {
+          "flight_number": "AA100",
+          "origin": "JFK",
+          "destination": "LAX",
+          "departure": "2025-11-20T08:00:00",
+          "arrival": "2025-11-20T11:00:00",
+          "airline": "American"
+        }
+      ]
+    },
+    {
+      "name": "Departures in November 2025",
+      "count": 2,
+      "results": [
+        {
+          "flight_number": "AA100",
+          "origin": "JFK",
+          "destination": "LAX",
+          "departure": "2025-11-20T08:00:00",
+          "arrival": "2025-11-20T11:00:00",
+          "airline": "American"
+        },
+        {
+          "flight_number": "UA400",
+          "origin": "SFO",
+          "destination": "SEA",
+          "departure": "2025-11-23T07:30:00",
+          "arrival": "2025-11-23T09:00:00",
+          "airline": "United"
+        }
+      ]
+    }
+  ]
+}

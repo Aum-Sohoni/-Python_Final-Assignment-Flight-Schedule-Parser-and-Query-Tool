@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Flights from JFK",
+    "filter": { "origin": "JFK" }
+  },
+  {
+    "name": "Departures in November 2025",
+    "departure_between": ["2025-11-01T00:00:00", "2025-11-30T23:59:59"]
+  }
+]

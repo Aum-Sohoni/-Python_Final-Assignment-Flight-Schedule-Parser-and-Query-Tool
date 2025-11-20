@@ -1,0 +1,2 @@
+sample_flights.csv:3: missing required field 'origin' -- {'flight_number': 'BA200', 'origin': '', 'destination': 'LHR', 'departure': '2025-11-21T09:00:00', 'arrival': '2025-11-21T19:00:00', 'airline': 'British'}
+sample_flights.csv:4: arrival before departure -- {'flight_number': 'DL300', 'origin': 'ATL', 'destination': 'MIA', 'departure': '2025-11-22T15:00:00', 'arrival': '2025-11-22T14:00:00', 'airline': 'Delta'}
