@@ -147,15 +147,16 @@ def apply_filters(flights: List[Dict[str, Any]], q: Dict[str, Any]) -> List[Dict
         start, end = q["departure_between"]
         start_dt = parse_iso_datetime(start)
         end_dt = parse_iso_datetime(end)
-        res = [f for f in res if start_dt <= parse_iso_datetime(f["departure"]) <= end_dt]
+        # stored field is `departure_datetime`
+        res = [f for f in res if start_dt <= parse_iso_datetime(f.get("departure_datetime", "")) <= end_dt]
 
     if "arrival_before" in q:
         end_dt = parse_iso_datetime(q["arrival_before"]) 
-        res = [f for f in res if parse_iso_datetime(f["arrival"]) <= end_dt]
+        res = [f for f in res if parse_iso_datetime(f.get("arrival_datetime", "")) <= end_dt]
 
     if "arrival_after" in q:
         start_dt = parse_iso_datetime(q["arrival_after"]) 
-        res = [f for f in res if parse_iso_datetime(f["arrival"]) >= start_dt]
+        res = [f for f in res if parse_iso_datetime(f.get("arrival_datetime", "")) >= start_dt]
 
     return res
 
